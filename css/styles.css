@@ -63,7 +63,8 @@ ul, li {
 }
 
 .links, .logo {
-  line-height: 150px;
+  line-height: 150px; /* This vertically aligns the logo with the nav links
+                         no matter what font-size the logo is */
 }
 
 /* Using a decendant selecter which selects all of the li elements that are
