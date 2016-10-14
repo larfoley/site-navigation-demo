@@ -19,32 +19,40 @@ ul, li {
   padding: 3em;
 }
 
-.logo-wrapper, .links-wrapper {
+.logo-wrapper, .links-wrapper, .site-nav {
 
-  /*Here we are floating are two container divs to the left and giving
-  them a 50% width so that the two divs sit side by side*/
+  outline: 1px solid blue;
+  /*  this is just to create an outline so that you can see
+      how much space the two divs are taking up   */
 
-  float: left;
-  width: 50%;
-  outline: 1px solid blue; /* this is just to create an outline so that you can see
-                              how much space the two divs are taking up*/
-
-  /* NOTE: floating these elements will cause the parent element to collapse
-    so in this case the site-nav div will collapse. It collapses because when we float
-    the elements inside of the site-nav div we are taking them out of natural flow of the document
-    so the site-nav now thinks there is no nested elements
-   */
 }
 
-.logo {
+/*Here we are floating are two container divs to the left and to the rigth
+  so that the two divs sit side by side*/
 
+.logo-wrapper {
+  float: left;
+}
+
+.links-wrapper {
+  float: right;
+}
+
+/* NOTE: floating these elements will cause the parent element to collapse
+  so in this case the site-nav div will collapse. It collapses because when we float
+  the elements inside of the site-nav div we are taking them out of natural flow of the document
+  so the site-nav now thinks there is no nested elements
+ */
+
+.logo {
+  font-size: 20px;
+  line-height: 1;
   color: white;
   text-decoration: none; /* Remove the underline that gets applied
                             to all anchor elements by default */
 }
 
 .links {
-
   text-align: right;
   /* This will cause any inline elements within the
   .links element to align to the right. Inline elements are elements that have
@@ -52,6 +60,10 @@ ul, li {
   inline elements they will be rendered next to each other as opposesed to on top
   of each other which is how block elements get rendered
   */
+}
+
+.links, .logo {
+  line-height: 150px;
 }
 
 /* Using a decendant selecter which selects all of the li elements that are
