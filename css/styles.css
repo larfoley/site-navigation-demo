@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav {
+  overflow: auto; /* fixes a bug that happens when
+                  using floats.
+
+                  for a better soloution that will work in every browser
+                  go to: http://nicolasgallagher.com/micro-clearfix-hack/
+
+                  */
+  background-color: black;
+  padding: 3em;
+}
+
+.logo-wrapper, .links-wrapper {
+
+  /*Here we are floating are two container divs to the left and giving
+  them a 50% width so that the two divs sit side by side*/
+
+  float: left;
+  width: 50%;
+  outline: 1px solid blue; /* this is just to create an outline so that you can see
+                              how much space the two divs are taking up*/
+
+  /* NOTE: floating these elements will cause the parent element to collapse
+    so in this case the site-nav div will collapse. It collapses because when we float
+    the elements inside of the site-nav div we are taking them out of natural flow of the document
+    so the site-nav now thinks there is no nested elements
+   */
+}
+
+.logo {
+
+  color: white;
+  text-decoration: none; /* Remove the underline that gets applied
+                            to all anchor elements by default */
+}
+
+.links {
+
+  text-align: right;
+  /* This will cause any inline elements within the
+  .links element to align to the right. Inline elements are elements that have
+  there display property set to inline or inline-block. When the browser loads
+  inline elements they will be rendered next to each other as opposesed to on top
+  of each other which is how block elements get rendered
+  */
+}
+
+/* Using a decendant selecter which selects all of the li elements that are
+  nested inside of the element with the class name of links
+*/
+.links li {
+  /* Setting the links to inline-block which will cause them to render side by side instead of
+    stacking on top of each other
+  */
+  display: inline-block;
+}
+
+.links a {
+  color: white;
+}
